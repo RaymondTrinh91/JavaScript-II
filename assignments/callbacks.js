@@ -96,8 +96,8 @@ function checkcontain(item, array){
 contains('Gum', items, checkcontain);
 
 /* STRETCH PROBLEM */
-
-let newArray = [];
+const exitems = ['tacos', 'tacos', 'burrito', 'chalupa', 'burrito', 'tacos'];
+// let newArray = [];
 function removeDuplicates(arr, cb) {
     cb(arr);
   // removeDuplicates removes all duplicate values from the given array.
@@ -107,12 +107,11 @@ function removeDuplicates(arr, cb) {
 
 function noDup(arr){
   let noDupes = arr.filter((item, index) => arr.indexOf(item) === index);
-  // console.log(newArray)
-  newArray = noDupes
-  return console.log(newArray)
+  // newArray = noDupes
+  console.log(noDupes);
 }
 
-removeDuplicates(exitems, noDup)
+removeDuplicates(exitems, noDup);
 
 
 
