@@ -40,30 +40,113 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 function getLength(arr, cb) {
+  return cb(arr.length);
   // getLength passes the length of the array into the callback.
 }
+function arrayLength(array){
+  console.log(array)
+  return array;
+}
+getLength(items, arrayLength)
+
 
 function last(arr, cb) {
+  return cb(arr[arr.length-1]);
   // last passes the last item of the array into the callback.
 }
 
+function lastItem(arrayLast){
+    console.log(arrayLast);
+    return arrayLast;
+}
+
+last(items, lastItem)
+
 function sumNums(x, y, cb) {
+  return cb(x, y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+function add (num1, num2){
+  console.log(num1 + num2);
+  return num1 + num2;
+
+}
+sumNums(5,6, add);
 
 function multiplyNums(x, y, cb) {
+  return cb(x,y);
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+function multi(num1, num2){
+  console.log(num1 * num2);
+  return num1 * num2;
+}
+multiplyNums(5, 6, multi);
 
 function contains(item, list, cb) {
+    cb(item, list);
+   
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+function checkcontain(item, array){
+  console.log(array.includes(item));
+}
+
+contains('Gum', items, checkcontain);
 
 /* STRETCH PROBLEM */
-
-function removeDuplicates(array, cb) {
+const exitems = ['tacos', 'tacos', 'burrito', 'chalupa', 'burrito', 'tacos'];
+// let newArray = [];
+function removeDuplicates(arr, cb) {
+    cb(arr);
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+function noDup(arr){
+  let noDupes = arr.filter((item, index) => arr.indexOf(item) === index);
+  // newArray = noDupes
+  console.log(noDupes);
+}
+
+removeDuplicates(exitems, noDup);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
